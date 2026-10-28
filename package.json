@@ -1,0 +1,16 @@
+{
+  "name": "electromart",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The ElectroMart - Smart Shopping. Better Living.",
+  "type": "module",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "dev": "node --watch --disable-warning=ExperimentalWarning src/server.js",
+    "seed": "node --disable-warning=ExperimentalWarning scripts/seed.js",
+    "owner:reset": "node --disable-warning=ExperimentalWarning scripts/owner-reset.js",
+    "backup": "node --disable-warning=ExperimentalWarning scripts/backup.js",
+    "test": "node --test --disable-warning=ExperimentalWarning \"tests/*.test.js\""
+  }
+}

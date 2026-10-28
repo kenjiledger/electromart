@@ -1,0 +1,11 @@
+# Pre-launch security checklist
+- [ ] `NODE_ENV=production`; server starts (it refuses weak config).
+- [ ] Owner password changed from the temporary one; stored in a password manager. `.env` not in git, file mode 600.
+- [ ] HTTPS only; HSTS active; proxy sets client IP correctly.
+- [ ] `SESSION_SECRET` random 32+ chars; Razorpay keys only in server env.
+- [ ] Sample data removed (Settings > Remove sample data); real policies published.
+- [ ] Test: anonymous and customer accounts get 303/403 on `/admin/*` (covered by `tests/auth.test.js`).
+- [ ] Backups scheduled and one restore tested.
+- [ ] Razorpay test-mode run-through completed (payment, failure, duplicate webhook, refund) before live keys.
+- [ ] Review Admin > Audit log after first week; keep OS and Node patched.
+- [ ] Turn on "Allow indexing" only at launch; submit `/sitemap.xml` to Google Search Console.
